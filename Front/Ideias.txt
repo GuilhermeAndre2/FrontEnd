@@ -1,0 +1,90 @@
+
+---------------> API <---------------
+https://any-api.com/
+https://github.com/gabrielcmarinho/links-uteis/blob/master/LINKS.md
+
+-------------->Api Spotify<-----------
+https://developer.spotify.com/
+
+-------------->Calendar<--------------
+https://developers.google.com/calendar
+
+
+----------------------Bots feitos em Python---------------------------
+https://www.youtube.com/watch?v=bkigzpBLN6o -> scam do curriculo
+https://www.youtube.com/watch?v=DBFE4gPdYYE -> Resume Match in python
+
+----------------------Assistente para agilizar as coisas--------------
+criar assistente virtual -> https://www.youtube.com/watch?v=_OgIOFVp3HM&list=PL39zyvnHdXh-4bQn1dBhz6Hlq3xO-wfQo&index=2
+criar assistente virtual c# 2021 -> https://www.youtube.com/watch?v=HJuhrBm8AC8&list=PL39zyvnHdXh8fkuWqzucS93REYaNEJVRx
+auto complete with linkedin, google and twitter -> https://www.youtube.com/watch?v=9MhLHkf7Ifs
+video call -> https://www.youtube.com/results?search_query=video+call+in+react+js+
+
+---------------------Referencias para usar------------------------------
+Libras -> https://github.com/djpfs/react-vlibras
+Resume Parse -> https://docs.microsoft.com/en-us/connectors/candidatezip/
+Resume Optimizer -> https://github.com/kosamson/resume-optimizer
+https://affinda.com/resume-parser/#
+
+--------------------Sistemas Cognitivos Google Cloud--------------------
+resume parse -> https://cloud.google.com/solutions/talent-solution
+resume parse -> https://cloud.google.com/s/results?q=resume%20parse
+resume chatbot -> https://cloud.google.com/blog/products/ai-machine-learning/build-a-resume-chatbot-on-google-cloud
+https://cloud.google.com/vision
+
+--------------------RECURSOS DIVERSOS------------------------------------
+ats -> https://recruitee.com/?utm_medium=cpc&utm_source=google&utm_campaign=RoWcampain&utm_term=ats%20systems&utm_campaign=CEE+(Long+Tail+Search)&utm_source=adwords&utm_medium=ppc&hsa_acc=2664385530&hsa_cam=11191096239&hsa_grp=120913323985&hsa_ad=525808511743&hsa_src=g&hsa_tgt=aud-386996408066:kwd-876033377&hsa_kw=ats%20systems&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwq9mLBhB2EiwAuYdMtWL-PQ23lQy2ENdxa6UG5aYCpsB7r6swZ-dKAmFBGuR7V4MVLmj-iBoCmsgQAvD_BwE
+rh azure -> OrangeHRM 
+Provação RH -> Multi Approval Process for Apps
+Ia de conversação google cloud -> https://cloud.google.com/dialogflow
+Pegar varias Apis -> https://rapidapi.com/mouse-at-work-mouse-at-work-default/api/job-and-resume-matching-for-hr-management-systems/
+https://rapidapi.com/janzz-ltd-janzz-ltd-default/api/parser/
+Lista APi de emprego -> https://www.programmableweb.com/news/top-10-jobs-apis-2021/brief/2021/06/30
+Document Ai -> Muito foda -> https://cloud.google.com/document-ai
+Resume Parser https://affinda.com/resume-parser/
+
+--------------------SISTEMAS COGNITIVOS AWS--------------------
+aws -> https://aws.amazon.com/pt/solutions/?nc2=h_ql_sol
+aws analise de dados ->https://aws.amazon.com/pt/kendra/?c=ml&sec=srv
+aws chatbot -> https://aws.amazon.com/pt/lex/?c=ml&sec=srv
+aws extração de informações de texto -> https://aws.amazon.com/pt/textract/?c=ml&sec=srv
+
+serviços cognitivos -> https://clutch.co/cloud
+
+https://github.com/devtk0582/applicant-tracking-system
+https://github.com/ZhengTzer/resume-scanner
+https://github.com/tak2/CV-compare
+
+RESUME SCAN MATCH EM C# -> https://github.com/MehtabAhmed176/job-description-resume-match
+
+https://github.com/Lorenalgm/contrate-me
+https://github.com/Lorenalgm/contrate-me-api
+
+-------------------> Calendario <----------------
+https://developers.google.com/calendar/api
+
+
+---------------------> ATS Microsoft <-----------------
+https://docs.microsoft.com/pt-br/dynamics365/human-resources/hr-admin-integration-ats-api-introduction
+https://docs.microsoft.com/pt-br/dynamics365/human-resources/hr-personnel-recruit
+
+-------------------->ATS<----------------------------
+https://boost.rs/en/solution/api-matching-metiers-competences/
+https://jobzi.com/jobzi-apis
+https://developers.boost.rs/api-gateway/
+https://github.com/lever/postings-api
+https://app.traitify.com/developer/job-matching
+https://github.com/traitify/traitify.net
+https://www.reed.co.uk/developers/recruiter
+https://theirc.github.io/tashbeek/
+https://hrflow.ai/scoring/
+https://www.maprecruit.ai/documentation-api#section/Authentication
+https://developers.manatal.com/reference/getting-started
+https://www.indeed.com/hire/resources/howtohub/how-to-consistently-attract-and-filter-quality-applicants
+https://www.programmableweb.com/api/instymatch
+https://www.janzz.jobs/static/doc/apiv1/parser_api.html
+https://www.rchilli.com/solutions/resumeparser-api
+https://promptapi.com/marketplace/description/resume_parser-api
+
+https://github.com/lightning-resume/linkedin-resume-parser
+https://github.com/irfanabliz/personality-test-react

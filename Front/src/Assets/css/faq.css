@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+.menu img{
+    width: 1378px;
+    height: 200px;
+    margin-left: -10px;
+}
+.simbolo img{
+    width: 150px;
+}
+.simbolo{
+    margin-top: -160px;
+    margin-left: 250px;
+    
+}
+.redireciona{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 200px;
+    margin-top: -45px;
+}
+.redireciona a{
+    color: white;
+    margin-left: 50px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.redireciona a:hover{
+    color: rgb(185, 133, 34);
+}
+.Faq{
+    margin-top: 100px;
+    margin-left: 270px;
+}
+.textos{
+    margin-top: 150px;
+    text-align: center;
+}
+
+.textos h2{
+    width: 200px;
+    border-bottom: 3px solid #543BA6;
+    margin-left: 570px;
+    padding-bottom: 40px;
+    color: #543BA6;
+}
+.textos p{
+    width: 500px;
+    margin-left: 430px;
+    margin-top: -37px;
+    color: black;
+}
+.Faq img{
+    width: 38px;
+}
+.detalhes{
+    margin: 20px;
+    width: 600px;
+    margin-left: 50px;
+    margin-top: -40px;
+}
+.linha{
+    width: 700px;
+    height: 3px;
+    color: black;
+}
+.detalhes summary{
+    color: #543BA6;
+}
+.details > summary {
+    
+    padding: 10px;
+    width: 200px;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+}
+  
+.details >  p {
+    width: 400px;
+    background-color: #eeeeee;
+    padding: 4px;
+    box-shadow: 1px 1px 2px #bbbbbb;
+}
+.rodape img{
+    margin-top: 170px;
+    width: 1350px;
+    height: 250px;
+}
+.midias{
+    margin-top: -20px;
+    margin-left: 44%;
+}
+.midias img{
+    width: 30px;
+    margin: 10px;
+    margin-top: 20px;
+}
+.Marca{
+    margin-left: 45%;
+}
+
+.imagens{
+    margin-top: -230px;
+}
+.ajuda img{
+    width: 800px;
+    margin-left: 260px;
+    margin-top: 100px;
+}
+.animacao{
+    margin-top: -300px;
+    margin-left: 600px;
+}
+.texto h2{
+    width: 220px;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 350px;
+    margin-top: -240px;
+    color: white;
+}
+
+.texto button{
+    width: 200px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: #FFA500;
+    padding: 7px;
+    margin-top: 20px;
+    margin-left: 350px;
+}

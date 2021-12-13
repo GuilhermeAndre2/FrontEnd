@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.topo img{
+    width: 1376px;
+    height: 200px;
+    margin-left: -10px;
+}
+
+.direcionamentos {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 200px;
+    margin-top: -45px;
+}
+
+.direcionamentos a{
+    color: white;
+    margin-left: 50px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.direcionamentos a:hover{
+    color: rgb(185, 133, 34);
+}
+.tabelas{
+    margin-top: 130px;
+}
+.Table{
+    width: 700px;
+    height: 300px;
+    border: solid 2px black;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+.Table h2{
+    padding: 20px;
+}
+.Table p{
+    margin-left: 20px;
+}
+.btn{
+    margin-top: 20px;
+    margin-left: 350px;
+}
+.desc{
+    width: 600px;
+    margin-top: 10px;
+}
+.btn button{
+    background-color: #FFA500;
+    width: 150px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin: 10px;
+}
+.brand img{
+    width: 150px;
+}
+
+.brand{
+    margin-top: -160px;
+    margin-left: 250px;
+}
+.VagasGerais{
+    width: 800px;
+    margin-top: -700px;
+    margin-left: 400px;
+    margin-bottom: 410px;
+}
+.identificador {
+    margin: 50px;
+    margin-left: 80px;
+    border: 2px solid black;
+}
+.identificador {
+    padding: 30px;
+    height: 130px;
+}
+.identificador h2{
+    margin-bottom: 15px;
+}
+.identificador button {
+    padding: 5px;
+    margin-right: 15px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    float: right;
+}
+.identificador button :hover{
+    border: 2px solid rgb(253, 0, 198);
+}
+.identificador button p{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+.bordinha2{
+    
+}
