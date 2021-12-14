@@ -4,6 +4,7 @@ import {parseJwt, usuarioAutenticado} from '../../Services/auth';
 import '../../Assets/css/login.css';
 
 import logo from '../../Assets/img/Logo.png'
+import logo_softx from '../../Assets/img/logo_softX.gif'
 
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -21,7 +22,7 @@ class Login extends Component {
   };
 
   notify = () => {
-      toast.error("Email ou Senha invalidos !!")
+      toast.error("Email ou Senha inválidos!")
   }
    Sucess = () => {
        toast.success("Login feito com sucesso !!")
@@ -116,9 +117,12 @@ render(){
         </head>
         <main>
             <section className="bg-roxo">
+            <h3>Entre e conheça a mais nova solução <br/> para processos seletivos da SoftX</h3>
+                <img src={logo_softx} alt="logo da softX" />
             </section>
             <section className="login">
                 <img src={logo} alt="logo" className='logo'/>
+                <form onSubmit={this.efetuaLogin} className="form">
                 <div className='input-box'>
                     <i class="fas fa-envelope"></i>
                     <input type="email" name="email" value={this.state.email} onChange={this.atualizaStateCampo}  placeholder="Digite seu email"/>
@@ -135,14 +139,15 @@ render(){
                         <p style={{color : 'red'}}>{this.state.errorMessage}</p>
                         {
                             this.state.isLoading === true &&
-                            <button type="submit" className='gui2' disabled>Loading...</button>
+                            <button type="submit" disabled>Loading...</button>
                         }
                         {
                             this.state.isLoading === false &&
-                            <button type="submit" className='Btn1' disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}> <p>Entrar</p> </button>
+                            <button type="submit"  disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}> <p>Entrar</p> </button>
                         }
                         <button class="Btn2"><a href="/cadastro">Cadastrar-se</a></button>
                     </div>
+                </form>
             </section>  
         </main>        
     </div>

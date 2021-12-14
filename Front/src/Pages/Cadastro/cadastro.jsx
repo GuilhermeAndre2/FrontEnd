@@ -1,7 +1,8 @@
 import { Component} from 'react';
 import '../../Assets/css/cadastro.css'
 
-import cadastro from '../../../src/Assets/img/cadastro2.jpg'
+import logo from '../../Assets/img/Logo.png'
+import logo_softx from '../../Assets/img/logo_softX.gif'
 
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -126,55 +127,92 @@ class CadastraUsuario  extends Component{
             foto : '',
         })
     }
+
+    exibeSenha()
+{
+    var x = document.getElementById("myInput");
+    var y = document.getElementById("hide1");
+    var z = document.getElementById("hide2");
+
+    if(x.type === 'password'){
+        x.type = "text";
+        y.style.display = 'block';
+        z.style.display = 'none';
+    }
+    else{
+        x.type = "password";
+        y.style.display = 'none';
+        z.style.display = 'block';
+    }
+}
 //---------------------------------------------------------------------------------------------------
     render(){ 
         return(
-            <main>
-                <div className="titulo">
-                <h1>Cadastrar-se</h1>
-                    <p>Bem Vindo ao portal de vagas da Linx, cadastre-se e tenha acesso as melhores vagas nas melhores empresas do país</p>
+            <div>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        </head>
+        <main>
+            <section className="bg-roxo">
+            <h3>Se cadastre  na mais nova <br/>solução de processos seletivos da SoftX</h3>
+                <img src={logo_softx} alt="logo da softX" />
+            </section>
+            <section className="login">
+                <img src={logo} alt="logo" className='logo'/>
+                <form onSubmit={this.cadastranovousuario} className="form">
+                <div className='input-box'>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" value={this.state.email} onChange={this.atualizaStateCampo}  placeholder="Digite seu email"/>
                 </div>
-                <div className="backgroud">
-                    <img src={cadastro} alt="Cadastro"/>
+                <div className='input-box'>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="senha" placeholder="Digite sua senha" value={this.state.senha} onChange={this.atualizaStateCampo} id='myInput'/>
+                    <span className="eye" onClick={this.exibeSenha}>
+                        <i id='hide1' class="fas fa-eye"></i>
+                        <i id='hide2' class="fas fa-eye-slash"></i>
+                    </span>
                 </div>
-                <section>
-                    <form onSubmit={this.cadastranovousuario}>
-                <div className="Cadastrar">
-                    
-                    
-                    <input placeholder="TipoUsuario" value = {this.state.idTipoUsuario} onChange={this.AtualizaIdTipoUsuario} type="text" className="gui2"></input>
-                                       
-                    <input placeholder="Digite seu nome" value = {this.state.nome} onChange={this.AtualizaNome}type="text" className="gui2"></input>
-
-                    
-                    <input placeholder="Digite sua idade" value = {this.state.idade} onChange={this.AtualizaIdade} type="text" className='gui2'></input>
-
-                    
-                    <input placeholder="Digite seu endereço" value = {this.state.endereco} onChange={this.AtualizaEndereco} type="text" className='gui2'></input>
-
-                    
-                    <input placeholder="Digite o seu CPF" value = {this.state.cpf} onChange={this.AtualizaCpf} type="text" className='gui2'></input>
-
+                <div className='input-box'>
+                    <i class="fas fa-user"></i>
+                    <input placeholder="Digite seu nome" value = {this.state.nome} onChange={this.AtualizaNome}type="text" className="gui2"/>
+                </div>
+                <div className='input-box'>
+                    <i class="fas fa-calendar-day"></i>
+                    <input placeholder="Digite sua idade" value = {this.state.idade} onChange={this.AtualizaIdade} type="text" className='gui2'/>
+                </div>
+                <div className='input-box'>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input placeholder="Digite seu endereço" value = {this.state.endereco} onChange={this.AtualizaEndereco} type="text" className='gui2'/>
+                </div>
+                <div className='input-box'>
+                    <i class="fas fa-file-alt"></i>
+                    <input placeholder="Digite o seu CPF" value = {this.state.cpf} onChange={this.AtualizaCpf} type="text" className='gui2'/>
+                </div>
+                <div className='input-box'>
+                    <i class="fas fa-file-alt"></i>
                     <input placeholder= "Digite o seu RG" value = {this.state.rg} onChange={this.AtualizaRg} type="text" className='gui2'></input>
-                    
-                    <input placeholder="Digite o seu Email" value = {this.state.email} onChange={this.AtualizaEmail} type="email" className='gui2' ></input>
-
-                    <input placeholder="Digite a sua Senha" value = {this.state.senha} onChange={this.AtualizaSenha} type="text" className='gui2'></input>
-                    
+                </div>
+                <div className='input-box'>
+                    <i class="fas fa-camera"></i>
                     <input placeholder="Insira sua foto" value = {this.state.foto} onChange={this.AtualizaFoto} type="text" className='gui2'></input>
-
-                    {
-                        <button type='submit'  disabled={this.state.idTipoUsuario === '', this.state.nome === '', this.state.idade === '', this.state.endereco === '', this.state.cpf === '', this.state.rg === '', this.state.email ==='', this.state.senha === '', this.state.foto === "" ? 'none' : ''} ><p>Cadastrar-se </p></button>
-                    }
-                        <button onClick={this.limparCampos}>
-                        <p>Cancelar</p>
-                        </button>
-                    </div>
-                    </form>
-
+                </div>
                     
-                </section>
-            </main>
+                        <p style={{color : 'red'}}>{this.state.errorMessage}</p>
+                        {
+                            this.state.isLoading === true &&
+                            <button type="submit" disabled>Loading...</button>
+                        }
+                        {
+                            this.state.isLoading === false &&
+                            <button type="submit"  disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}> <p>Entrar</p> </button>
+                        }
+                         <button type='submit'  disabled={this.state.idTipoUsuario === '', this.state.nome === '', this.state.idade === '', this.state.endereco === '', this.state.cpf === '', this.state.rg === '', this.state.email ==='', this.state.senha === '', this.state.foto === "" ? 'none' : ''} ><p>Cadastrar-se </p></button>
+                    
+                </form>
+            </section>  
+        </main>        
+    </div>
+                
         )}
 }
 export default CadastraUsuario;

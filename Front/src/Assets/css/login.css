@@ -13,9 +13,16 @@ main{
 }
 
 .bg-roxo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 50%;
     height: 100%;
     background-color: #411E5A;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Poppins',sans-serif;
 }
 
 .login{
@@ -34,13 +41,14 @@ main{
 }
 
 .input-box{
-    width: 50%;
+    width: 100%;
     border: solid 1px #7A3BBA;
     background-color: #FFF;
     border-radius: 5px;
     padding-left: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    margin-top: 1em;
 }
 
 .input-box i{
@@ -55,7 +63,6 @@ main{
     outline: none;
     border: none;
     width: 80%;
-    padding-right: 1em;
 }
 ::placeholder{
     color: #CCCCCC;
@@ -66,19 +73,24 @@ main{
     width: 150px;
     height: 35px;
     background-color: #F2A517;
-    color: #411E5A;
+    color: #7A3BBA;
     cursor: pointer;
     text-decoration: none;
+    margin-top: 1em;
 }
 
 .Btn2 a{
     text-decoration: none;
+    color: #7A3BBA;
 }
 
 .btn-login{
+    width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 1.8em;
 }
+
+
 
 .logo{
     display: flex;
@@ -92,4 +104,8 @@ main{
 }
 #hide1{
     display: none;
+}
+
+.form{
+    width: 50%;
 }
