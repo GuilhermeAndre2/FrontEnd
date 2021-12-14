@@ -3,8 +3,7 @@ import axios from 'axios';
 import {parseJwt, usuarioAutenticado} from '../../Services/auth';
 import '../../Assets/css/login.css';
 
-import Fundo from '../../Assets/img/fundo.jpg'
-import logo from '../../Assets/img/Logo1.png'
+import logo from '../../Assets/img/Logo.png'
 
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -90,36 +89,63 @@ axios.post('https://localhost:5001/v1/login', {
 atualizaStateCampo = (campo) => {
   this.setState({ [campo.target.name] : campo.target.value})
 }
+
+exibeSenha()
+{
+    var x = document.getElementById("myInput");
+    var y = document.getElementById("hide1");
+    var z = document.getElementById("hide2");
+
+    if(x.type === 'password'){
+        x.type = "text";
+        y.style.display = 'block';
+        z.style.display = 'none';
+    }
+    else{
+        x.type = "password";
+        y.style.display = 'none';
+        z.style.display = 'block';
+    }
+}
+
 render(){
   return(
-      <div>
-  <main>
-      <section className="entrar">
-          <div className="fundo" >
-              <img src={Fundo} alt="logo do instagra"/>
-          </div>
-          <form onSubmit={this.efetuaLogin} className="Geral">
-              <section className="Geral">
-                  <div>
-                    <img src={logo} alt="logo do instagra"/>
-                  </div>
-                  <input type="text" name="email" value={this.state.email} onChange={this.atualizaStateCampo}  placeholder="Digite seu email"/>
-                  <input type="text" name="senha" placeholder="Digite sua senha" value={this.state.senha} onChange={this.atualizaStateCampo}/>
-                  <p style={{color : 'red'}}>{this.state.errorMessage}</p>
-                  {
-                      this.state.isLoading === true &&
-                      <button type="submit" className='gui2' disabled>Loading...</button>
-                  }
-                  {
-                      this.state.isLoading === false &&
-                      <button type="submit" className='Btn1' disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}> <p>Entrar</p> </button>
-                  }
-                  <button class="Btn2"><a href="/cadastro">Cadastrar-se</a></button>
-              </section>
-          </form>
-      </section>
-  </main>        
-      </div>
+    <div>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        </head>
+        <main>
+            <section className="bg-roxo">
+            </section>
+            <section className="login">
+                <img src={logo} alt="logo" className='logo'/>
+                <div className='input-box'>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" value={this.state.email} onChange={this.atualizaStateCampo}  placeholder="Digite seu email"/>
+                </div>
+                <div className='input-box'>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="senha" placeholder="Digite sua senha" value={this.state.senha} onChange={this.atualizaStateCampo} id='myInput'/>
+                    <span className="eye" onClick={this.exibeSenha}>
+                        <i id='hide1' class="fas fa-eye"></i>
+                        <i id='hide2' class="fas fa-eye-slash"></i>
+                    </span>
+                </div>
+                    <div className="btn-login">
+                        <p style={{color : 'red'}}>{this.state.errorMessage}</p>
+                        {
+                            this.state.isLoading === true &&
+                            <button type="submit" className='gui2' disabled>Loading...</button>
+                        }
+                        {
+                            this.state.isLoading === false &&
+                            <button type="submit" className='Btn1' disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}> <p>Entrar</p> </button>
+                        }
+                        <button class="Btn2"><a href="/cadastro">Cadastrar-se</a></button>
+                    </div>
+            </section>  
+        </main>        
+    </div>
   )
 }
 }
