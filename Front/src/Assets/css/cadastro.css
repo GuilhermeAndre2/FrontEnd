@@ -9,3 +9,31 @@
 .Btn2-cad{
     text-decoration: none;
 }
+
+.btn-cad{
+    position: relative;
+    left: 17.5em;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    font-size: 12px;
+    display: inline-block;
+    border: solid 1px #F2A517;
+    background-color: #F2A517;
+    border-radius: 5px;
+    padding: 4px;
+    color: #7A3BBA;
+    cursor: pointer;
+}
+
+.audio{
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 80%;
+    z-index: 1000;
+}

@@ -145,6 +145,8 @@ class CadastraUsuario  extends Component{
         z.style.display = 'block';
     }
 }
+
+
 //---------------------------------------------------------------------------------------------------
     render(){ 
         return(
@@ -160,6 +162,12 @@ class CadastraUsuario  extends Component{
             <section className="login">
                 <img src={logo} alt="logo" className='logo'/>
                 <form onSubmit={this.cadastranovousuario} className="form">
+
+            <div className="form-step form-step-active">
+                <div className='input-box'>
+                    <i class="fas fa-user"></i>
+                    <input placeholder="Digite seu nome" value = {this.state.nome} onChange={this.AtualizaNome}type="text" className="gui2"/>
+                </div>
                 <div className='input-box'>
                     <i class="fas fa-envelope"></i>
                     <input type="email" name="email" value={this.state.email} onChange={this.atualizaStateCampo}  placeholder="Digite seu email"/>
@@ -172,17 +180,10 @@ class CadastraUsuario  extends Component{
                         <i id='hide2' class="fas fa-eye-slash"></i>
                     </span>
                 </div>
-                <div className='input-box'>
-                    <i class="fas fa-user"></i>
-                    <input placeholder="Digite seu nome" value = {this.state.nome} onChange={this.AtualizaNome}type="text" className="gui2"/>
-                </div>
+    
                 <div className='input-box'>
                     <i class="fas fa-calendar-day"></i>
-                    <input placeholder="Digite sua idade" value = {this.state.idade} onChange={this.AtualizaIdade} type="text" className='gui2'/>
-                </div>
-                <div className='input-box'>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input placeholder="Digite seu endereço" value = {this.state.endereco} onChange={this.AtualizaEndereco} type="text" className='gui2'/>
+                    <input placeholder="Digite sua data de nascimento" value = {this.state.idade} onChange={this.AtualizaIdade} type="text" className='gui2' data-mask="00/00/0000"/>
                 </div>
                 <div className='input-box'>
                     <i class="fas fa-file-alt"></i>
@@ -194,7 +195,10 @@ class CadastraUsuario  extends Component{
                 </div>
                 <div className='input-box'>
                     <i class="fas fa-camera"></i>
-                    <input placeholder="Insira sua foto" value = {this.state.foto} onChange={this.AtualizaFoto} type="text" className='gui2'></input>
+                    <label for="file-upload" className="custom-file-upload">
+                        Escolha uma foto
+                    </label>
+                    <input id="file-upload" type="file"/>
                 </div>
                     
                         <p style={{color : 'red'}}>{this.state.errorMessage}</p>
@@ -206,8 +210,8 @@ class CadastraUsuario  extends Component{
                             this.state.isLoading === false &&
                             <button type="submit"  disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}> <p>Entrar</p> </button>
                         }
-                         <button type='submit'  disabled={this.state.idTipoUsuario === '', this.state.nome === '', this.state.idade === '', this.state.endereco === '', this.state.cpf === '', this.state.rg === '', this.state.email ==='', this.state.senha === '', this.state.foto === "" ? 'none' : ''} ><p>Cadastrar-se </p></button>
-                    
+                         <button type='submit' className='btn-cad' disabled={this.state.idTipoUsuario === '', this.state.nome === '', this.state.idade === '', this.state.endereco === '', this.state.cpf === '', this.state.rg === '', this.state.email ==='', this.state.senha === '', this.state.foto === "" ? 'none' : ''} ><p>Cadastrar-se</p></button>
+            </div>
                 </form>
             </section>  
         </main>        
